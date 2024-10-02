@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronghao Liu - Personal Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        .tab {
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #ecf0f1;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            flex-grow: 1;
+        }
+        .tab button:hover {
+            background-color: #bdc3c7;
+        }
+        .tab button.active {
+            background-color: #3498db;
+            color: white;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: fadeEffect 1s;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .skill {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: transform 0.2s;
+        }
+        .skill:hover {
+            transform: scale(1.05);
+        }
+        #catInfo {
+            margin-top: 15px;
+            font-style: italic;
+            color: #2c3e50;
+        }
+        button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #27ae60;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            border: 5px solid white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            object-fit: cover;
+        }
+        .cat-showcase {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .cat-card {
+            text-align: center;
+            width: 30%;
+            min-width: 200px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .cat-card:hover {
+            transform: translateY(-5px);
+        }
+        .cat-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .cat-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .cat-hobby {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile-pic.jpg" alt="Ronghao Liu" class="profile-pic">
+            <h1>Ronghao Liu</h1>
+            <p class="subtitle">IT Service Student | CCNA Certified | Trilingual</p>
+        </header>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'About')">About Me</button>
+            <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
+            <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+            <button class="tablinks" onclick="openTab(event, 'Hobbies')">Hobbies</button>
+        </div>
+
+        <div id="About" class="tabcontent">
+            <h2>Welcome to My World!</h2>
+            <p>Hello! I'm Ronghao, an IT service student with a Cisco CCNA certification and a perfect 4.0 GPA. I'm fluent in Mandarin, Cantonese, and English, which allows me to bridge cultural and technical gaps in the diverse world of IT.</p>
+            <p>My journey in technology is driven by curiosity and a desire to make complex systems work seamlessly. When I'm not diving into code or configuring networks, you might find me serving up smiles at Fusion Sushi & Thai or playing with my beloved cats.</p>
+        </div>
+
+        <div id="Resume" class="tabcontent">
+            <h2>Professional Experience</h2>
+            <ul>
+                <li>
+                    <strong>IT Diploma (In Progress)</strong>
+                    <p>SAIT, Calgary, AB | April 2023 - Present</p>
+                    <p>GPA: 4.0/4.0 (All courses with full marks)</p>
+                </li>
+                <li>
+                    <strong>Server/Bartender</strong>
+                    <p>Fusion Sushi & Thai, Calgary, AB | May 2023 - Present</p>
+                </li>
+                <li>
+                    <strong>E-Commerce Specialist</strong>
+                    <p>Guangzhou SendPoints Books Co., Ltd., Guangzhou, China | July 2017 - January 2023</p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="Skills" class="tabcontent">
+            <h2>Technical Prowess</h2>
+            <div class="skill">Networking</div>
+            <div class="skill">Cloud Computing</div>
+            <div class="skill">Programming</div>
+            <div class="skill">Virtualization</div>
+            <div class="skill">Automation & DevOps</div>
+        </div>
+
+        <div id="Hobbies" class="tabcontent">
+            <h2>Life Beyond Code</h2>
+            <h3>My Feline Friends</h3>
+            <div class="cat-showcase">
+                <div class="cat-card">
+                    <img src="cat1.jpg" alt="Orange" class="cat-img">
+                    <p class="cat-name">Orange</p>
+                    <p class="cat-hobby">Loves eating, sleeping, and being spanked</p>
+                </div>
+                <div class="cat-card">
+                    <img src="cat2.jpg" alt="Princess" class="cat-img">
+                    <p class="cat-name">Princess</p>
+                    <p class="cat-hobby">Clean cat who grooms herself, licks owner back when petted</p>
+                </div>
+                <div class="cat-card">
+                    <img src="cat3.jpg" alt="Dot" class="cat-img">
+                    <p class="cat-name">Dot</p>
+                    <p class="cat-hobby">Shy but loves to secretly show affection</p>
+                </div>
+            </div>
+            <h3>Interests</h3>
+            <ul>
+                <li>Exploring new technologies</li>
+                <li>Reading tech blogs and books</li>
+                <li>Cooking international cuisines</li>
+                <li>Hiking in the beautiful Canadian Rockies</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>© 2024 Ronghao Liu | Calgary, AB T3C 0Y1 | royiki7@gmail.com | +1 403 808 7655</p>
+        </footer>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Open the About tab by default
+        document.getElementsByClassName('tablinks')[0].click();
+    </script>
+</body>
+</html>
